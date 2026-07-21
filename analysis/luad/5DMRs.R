@@ -2,7 +2,7 @@ library(RColorBrewer)
 library(Gviz)
 
 
-setwd(Sys.getenv("LUSC_DATA_DIR", unset = "."))
+setwd(Sys.getenv("LUAD_DATA_DIR", unset = "."))
 mval <- readRDS("mval_filtered.RDS")
 bval <- readRDS("bval_filtered.RDS")
 clinical = readRDS(file = "clinical.RDS")
@@ -34,8 +34,7 @@ results.ranges
 write.table(results.ranges, file = "DMR_genes2.txt", sep="\t", quote = F, row.names=T)
 
 # set up the grouping variables and colours
-#install.packages('riskyr')
-library(riskyr)
+pal <- brewer.pal(max(3, length(unique(clinical$sample_type))), "Set2")
 groups <- pal[1:length(unique(clinical$sample_type))]
 names(groups) <- levels(factor(clinical$sample_type))
 cols <- groups[as.character(factor(clinical$sample_type))]

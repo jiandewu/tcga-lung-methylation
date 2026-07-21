@@ -1,0 +1,19 @@
+name: tcga-lung-methylation
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.4
+  - r-biocmanager
+  - r-ggplot2
+  - r-gplots
+  - r-rcolorbrewer
+  - bioconductor-dmrcate
+  - bioconductor-edger
+  - bioconductor-gviz
+  - bioconductor-illuminahumanmethylation450kanno.ilmn12.hg19
+  - bioconductor-illuminahumanmethylation450kmanifest
+  - bioconductor-limma
+  - bioconductor-minfi
+  - bioconductor-missmethyl
+  - bioconductor-tcgabiolinks

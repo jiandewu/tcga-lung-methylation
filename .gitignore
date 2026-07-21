@@ -1,0 +1,58 @@
+# R session and IDE state
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# Local environments and credentials
+renv/library/
+renv/staging/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Downloaded and controlled data
+data/
+raw_data/
+clinical/
+GDCdata/
+**/GDCdata/
+*.RDS
+*.rds
+*.idat
+*.idat.gz
+*.bed
+
+# Methylation matrices and generated results
+*mval*.txt
+*bval*.txt
+DMC*.txt
+DMR*.txt
+results/
+output/
+outputs/
+figures/
+plots/
+
+# Reports and private documents
+*.html
+*.docx
+*.pdf
+**/report/
+**/reports/
+**/manuscript/
+private-documents/
+
+# Temporary files and editors
+*.Rout
+*.log
+**/tmp/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp

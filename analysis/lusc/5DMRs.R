@@ -34,8 +34,7 @@ results.ranges
 write.table(results.ranges, file = "DMR_genes2.txt", sep="\t", quote = F, row.names=T)
 
 # set up the grouping variables and colours
-#install.packages('riskyr')
-library(riskyr)
+pal <- brewer.pal(max(3, length(unique(clinical$sample_type))), "Set2")
 groups <- pal[1:length(unique(clinical$sample_type))]
 names(groups) <- levels(factor(clinical$sample_type))
 cols <- groups[as.character(factor(clinical$sample_type))]
